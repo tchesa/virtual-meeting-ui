@@ -1,0 +1,45 @@
+@import "../../assets/style/variables/colors.scss";
+
+.layout-selector {
+  list-style: none;
+  display: flex;
+
+  .layout-selector-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .layout-selector-button {
+      background-color: transparent;
+      border: 0 none;
+      padding: 16px;
+      cursor: pointer;
+    }
+
+    &:not(.selected) {
+      .layout-selector-button > svg {
+        opacity: 0.25;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    hr {
+      width: 22px;
+      border-width: 2px;
+      border-color: $primary;
+      box-shadow: 0px -2px 4px rgba(45, 140, 255, 0.8);
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
