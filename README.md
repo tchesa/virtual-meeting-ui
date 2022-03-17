@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# virtual-meeting-ui
+A prototype of web-based virtual meeting app,
+based on https://www.figma.com/community/file/1078619834576174964 .
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
