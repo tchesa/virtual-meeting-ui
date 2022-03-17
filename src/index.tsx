@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Main from './views/main/main';
 import './assets/style/main.scss'
 
 function App() {
   return (
     <div className="App">
-      App
+      <Main />
     </div>
   );
 }
