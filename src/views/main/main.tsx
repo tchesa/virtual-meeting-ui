@@ -23,6 +23,7 @@ const Main = () => {
       <div className="meeting-footer">
         <VolumeSlider />
         <TransmissionControllers />
+        <button>Leave Meeting</button>
       </div>
     </div>
     <div className="side-col">

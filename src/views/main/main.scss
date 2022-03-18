@@ -1,4 +1,5 @@
 @import "../../assets/style/variables/colors.scss";
+@import "../../assets/style/mixins/card.scss";
 
 $header-height: 80px;
 $footer-height: 100px;
@@ -52,6 +53,15 @@ $border: 1px solid rgba(55, 65, 81, 0.5);
       padding: 22px 16px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      > button {
+        @include card;
+        height: 100%;
+        padding: 16px;
+        background-color: $danger;
+        border: 0 none;
+      }
     }
   }
 
