@@ -30,6 +30,11 @@ $spacing: 16px;
         width: 76px;
         justify-content: center;
 
+        &.active {
+          background-color: $primary;
+          border: 0 none;
+        }
+
         .chevron {
           margin-left: 8px;
         }

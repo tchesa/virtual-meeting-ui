@@ -37,10 +37,10 @@ const TransmissionControllers = () => {
           </button>
         </li>
         <li className="control-container">
-          <button className="control-button">
+          <button className="control-button active">
             <Record />
             <span className="chevron">
-              <Chevron />
+              <Chevron color="white" />
             </span>
           </button>
         </li>
