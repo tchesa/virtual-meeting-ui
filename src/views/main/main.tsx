@@ -3,6 +3,7 @@ import LayoutSelector, { Layout } from '../../components/layout-selector/layout-
 import Protected from '../../components/protected/protected'
 import Timer from '../../components/timer/timer'
 import TransmissionControllers from '../../components/transmission-controllers/transmission-controllers'
+import VolumeSlider from '../../components/volume-slider/volume-slider'
 import './main.scss'
 
 const Main = () => {
@@ -20,6 +21,7 @@ const Main = () => {
 
       </div>
       <div className="meeting-footer">
+        <VolumeSlider />
         <TransmissionControllers />
       </div>
     </div>

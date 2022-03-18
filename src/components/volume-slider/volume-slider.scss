@@ -1,0 +1,6 @@
+@import "../../assets/style/mixins/card.scss";
+
+.volume-slider {
+  @include card;
+  padding: 16px;
+}
