@@ -1,0 +1,10 @@
+@import "../variables/colors.scss";
+
+@mixin card {
+  background-color: rgba(55, 65, 81, 0.5);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  color: $text-normal-300;
+}

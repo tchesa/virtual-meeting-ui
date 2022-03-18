@@ -18,7 +18,20 @@ $border: 1px solid rgba(55, 65, 81, 0.5);
       height: $header-height;
       border-bottom: $border;
       display: flex;
+      align-items: center;
       justify-content: center;
+      position: relative;
+
+      .layout-selector {
+        height: 100%;
+      }
+
+      .timer {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     .meeting-content {
