@@ -11,6 +11,7 @@ const Main = () => {
   const [layout, setLayout] = useState<Layout>(Layout.GRID)
   const [sidebarSection, setSidebarSection] = useState<Option>('participants')
   const [startedAt] = useState(new Date())
+  const [volume, setVolume] = useState<number>(.5)
 
   return <div className="main-container">
     <div className="meeting-col">
@@ -23,7 +24,7 @@ const Main = () => {
 
       </div>
       <div className="meeting-footer">
-        <VolumeSlider />
+        <VolumeSlider value={volume} onChange={setVolume} />
         <TransmissionControllers />
         <button>Leave Meeting</button>
       </div>
