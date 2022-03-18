@@ -1,8 +1,7 @@
-@import "../../assets/style/variables/colors.scss";
 @import "../../assets/style/mixins/card.scss";
+@import "../../assets/style/variables/colors.scss";
+@import "../../assets/style/variables/metrics.scss";
 
-$header-height: 80px;
-$footer-height: 100px;
 $border: 1px solid rgba(55, 65, 81, 0.5);
 
 .main-container {

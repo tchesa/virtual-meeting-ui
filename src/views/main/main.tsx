@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import LayoutSelector, { Layout } from '../../components/layout-selector/layout-selector'
+import ParticipantsApps, { Option } from '../../components/participants-apps/participants-apps'
 import Protected from '../../components/protected/protected'
 import Timer from '../../components/timer/timer'
 import TransmissionControllers from '../../components/transmission-controllers/transmission-controllers'
@@ -8,6 +9,7 @@ import './main.scss'
 
 const Main = () => {
   const [layout, setLayout] = useState<Layout>(Layout.GRID)
+  const [sidebarSection, setSidebarSection] = useState<Option>('participants')
   const [startedAt] = useState(new Date())
 
   return <div className="main-container">
@@ -27,12 +29,7 @@ const Main = () => {
       </div>
     </div>
     <div className="side-col">
-      <div className="side-header">
-
-      </div>
-      <div className="side-content">
-
-      </div>
+      <ParticipantsApps option={sidebarSection} onChange={setSidebarSection} />
     </div>
   </div>
 }
