@@ -2,6 +2,7 @@ import { useState } from 'react'
 import LayoutSelector, { Layout } from '../../components/layout-selector/layout-selector'
 import Protected from '../../components/protected/protected'
 import Timer from '../../components/timer/timer'
+import TransmissionControllers from '../../components/transmission-controllers/transmission-controllers'
 import './main.scss'
 
 const Main = () => {
@@ -19,7 +20,7 @@ const Main = () => {
 
       </div>
       <div className="meeting-footer">
-
+        <TransmissionControllers />
       </div>
     </div>
     <div className="side-col">
