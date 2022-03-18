@@ -28,7 +28,7 @@ const LayoutSelector = ({ value, onChange }: Props) => {
   return (
     <ul className="layout-selector">
       {Object.values(Layout).map(layout => (
-        <li className={`layout-selector-item ${value === layout ? 'selected' : ''}`}>
+        <li className={`layout-selector-item ${value === layout ? 'selected' : ''}`} key={layout}>
           <button
             className="layout-selector-button"
             onClick={() => {
