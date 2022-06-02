@@ -47,7 +47,7 @@ const participantsMock: Participant[] = [
 const badgeByRole: {[role in Role]: ReactNode} = {
   'participant': <></>,
   'co-host': <Badge text="Co-Host" />,
-  'host': <Badge text="host" />
+  'host': <Badge text="Host" />
 }
 
 const ParticipantsList = () => {

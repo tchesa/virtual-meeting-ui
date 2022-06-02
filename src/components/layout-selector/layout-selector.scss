@@ -18,28 +18,44 @@
       border: 0 none;
       padding: 16px;
       cursor: pointer;
+
+      > svg {
+        opacity: .25;
+      }
     }
 
-    &:not(.selected) {
+    &.selected, &:hover {
       .layout-selector-button > svg {
-        opacity: 0.25;
+        opacity: 1;
       }
 
       hr {
-        display: none;
+        display: block;
       }
+    }
+
+    &:hover {
+      hr {
+        border-color: $text-normal-700;
+      }
+    }
+
+    &.selected hr {
+      border-color: $primary;
+      box-shadow: 0px -2px 4px rgba($primary, 80%);
     }
 
     hr {
       width: 22px;
-      border-width: 2px;
-      border-color: $primary;
-      box-shadow: 0px -2px 4px rgba(45, 140, 255, 0.8);
+      border-width: 1px;
       margin: 0;
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      border-style: solid;
+      border-radius: 2px;
+      display: none;
     }
   }
 }
