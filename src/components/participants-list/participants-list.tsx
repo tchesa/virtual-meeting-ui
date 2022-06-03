@@ -21,7 +21,7 @@ const roleOrder = (role: Role) => {
 const ParticipantsList = () => {
   const { participants } = useParticipants()
 
-  const sortedParticipants = (participants || []).sort((a, b) => {
+  const sortedParticipants = [...(participants || [])].sort((a, b) => {
     return roleOrder(a.role) - roleOrder(b.role)
   })
 
