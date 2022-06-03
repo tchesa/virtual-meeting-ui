@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import CameraFill from "../../assets/icons/camera-fill"
 import MicrophoneMuted from "../../assets/icons/microphone-muted"
 import { useParticipants } from "../../contexts/participants-context"
-import { Role } from "../../models"
+import { Participant, Role } from "../../models"
 import Badge from "../badge/badge"
 import './participants-list.scss'
 
@@ -18,6 +18,27 @@ const roleOrder = (role: Role) => {
   return 3
 }
 
+export type ParticipantsListItemProps = {
+  participant: Participant
+}
+
+export const ParticipantsListItem = ({ participant }: ParticipantsListItemProps) => (
+  <li className="participant-item" key={participant.id}>
+    <img className="participant-photo" alt={participant.name} src={participant.photo} />
+    <div className="participant-details">
+      <span className="participant-name">{participant.name}</span>
+      {participant.description && <span className="participant-description">{participant.description}</span>}
+    </div>
+    {badgeByRole[participant.role]}
+    <button className={`control-button ${false ? 'active' : ''}`}>
+      <MicrophoneMuted />
+    </button>
+    <button className={`control-button ${true ? 'active' : ''}`}>
+      <CameraFill />
+    </button>
+  </li>
+)
+
 const ParticipantsList = () => {
   const { participants } = useParticipants()
 
@@ -29,20 +50,7 @@ const ParticipantsList = () => {
     <div className="participants-list">
       <ul className="list">
         {sortedParticipants.map(participant => (
-          <li className="participant-item" key={participant.id}>
-            <img className="participant-photo" alt={participant.name} src={participant.photo} />
-            <div className="participant-details">
-              <span className="participant-name">{participant.name}</span>
-              {participant.description && <span className="participant-description">{participant.description}</span>}
-            </div>
-            {badgeByRole[participant.role]}
-            <button className={`control-button ${false ? 'active' : ''}`}>
-              <MicrophoneMuted />
-            </button>
-            <button className={`control-button ${true ? 'active' : ''}`}>
-              <CameraFill />
-            </button>
-          </li>
+          <ParticipantsListItem participant={participant} />
         ))}
       </ul>
       <div className="footer">
