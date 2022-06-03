@@ -1,0 +1,15 @@
+.participants-grid-container {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+
+  .participants-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+
+    .participant-player {
+      width: 16vw;
+    }
+  }
+}

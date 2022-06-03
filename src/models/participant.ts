@@ -6,4 +6,5 @@ export type Participant = {
   description?: string,
   photo?: string,
   role: Role,
+  verified?: boolean
 }

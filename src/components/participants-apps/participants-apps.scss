@@ -41,6 +41,19 @@
     }
   }
 
+  .content {
+    height: calc(100vh - 81px);
+    display: flex;
+    flex-direction: column;
+
+    &.participants {
+      .participants-list {
+        min-height: 20%;
+        max-height: 50%;
+      }
+    }
+  }
+
   .chat-header {
     background-color: rgba(31, 41, 55, 0.5);
     padding: 8px;

@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import LayoutSelector, { Layout } from '../../components/layout-selector/layout-selector'
+import LayoutSelector from '../../components/layout-selector/layout-selector'
 import ParticipantsApps, { Option } from '../../components/participants-apps/participants-apps'
+import ParticipantsView, { DEFAULT_LAYOUT, Layout } from '../../components/participants-grid/participants-grid'
 import Protected from '../../components/protected/protected'
 import Timer from '../../components/timer/timer'
 import TransmissionControllers from '../../components/transmission-controllers/transmission-controllers'
@@ -8,7 +9,7 @@ import VolumeSlider from '../../components/volume-slider/volume-slider'
 import './main.scss'
 
 const Main = () => {
-  const [layout, setLayout] = useState<Layout>(Layout.GRID)
+  const [layout, setLayout] = useState<Layout>(DEFAULT_LAYOUT)
   const [sidebarSection, setSidebarSection] = useState<Option>('participants')
   const [startedAt] = useState(new Date())
   const [volume, setVolume] = useState<number>(.5)
@@ -21,7 +22,7 @@ const Main = () => {
         <Timer startedAt={startedAt} />
       </div>
       <div className="meeting-content">
-
+        <ParticipantsView layout={layout} />
       </div>
       <div className="meeting-footer">
         <VolumeSlider value={volume} onChange={setVolume} />
