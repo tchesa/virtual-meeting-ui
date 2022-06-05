@@ -12,7 +12,7 @@ $spacing: 16px;
 
     .control-container {
       display: inline-block;
-      padding: 0 $spacing / 2;
+      padding: 0 calc($spacing / 2);
 
       &:first-child {
         padding-left: 0;
