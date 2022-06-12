@@ -1,0 +1,68 @@
+@import "../../assets/style/variables/colors.scss";
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .chat-list {
+    flex-grow: 1;
+  }
+
+  .chat-footer {
+    border-top: 1px solid rgba($text-normal-700, 0.5);
+    padding: 0 8px;
+
+    &-header {
+      display: flex;
+      padding: 8px 0 11px;
+
+      .chat-footer-rooms {
+        flex-grow: 1;
+      }
+
+      .chat-footer-options > button {
+        background-color: transparent;
+        padding: 4px;
+        margin-left: 8px;
+
+        > svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .chat-footer-form {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+
+      > input {
+        border: 0 none;
+        padding: 12px 0;
+        flex-grow: 1;
+        background-color: transparent;
+        color: $text-normal-0;
+
+        &:focus-visible {
+          outline-color: $primary;
+        }
+
+        &::placeholder {
+          color: $text-normal-500;
+        }
+      }
+
+      > button {
+        margin-left: 8px;
+        padding: 8px;
+        background-color: $primary;
+        border-radius: 8px;
+        display: block;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}
