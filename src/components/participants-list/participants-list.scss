@@ -5,9 +5,8 @@
 
   .list {
     list-style: none;
-    padding: 8px 8px 32px;
-    max-height: calc(100% - 32px);
-    max-height: 100%;
+    padding: 8px;
+    max-height: calc(100% - 40px);
     overflow-y: auto;
     box-sizing: border-box;
 
@@ -61,11 +60,7 @@
     text-align: center;
     padding-bottom: 8px;
     padding-top: 8px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba($dark, 0), $dark, $dark);
+    border-top: 1px solid rgba($text-normal-700, 0.5);
 
     button {
       border: 0 none;

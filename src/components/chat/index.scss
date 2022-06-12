@@ -5,6 +5,15 @@
   flex-direction: column;
   flex-grow: 1;
 
+  .chat-header {
+    background-color: rgba(31, 41, 55, 0.5);
+    padding: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $text-normal-400;
+  }
+
   .chat-list {
     flex-grow: 1;
   }
