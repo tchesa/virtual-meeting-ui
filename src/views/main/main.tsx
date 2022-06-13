@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import LayoutSelector from '../../components/layout-selector/layout-selector'
-import ParticipantsApps, { Option } from '../../components/participants-apps/participants-apps'
+import { Option } from '../../components/participants-apps-selector/participants-apps-selector'
+import ParticipantsApps from '../../components/participants-apps/participants-apps'
 import ParticipantsView, { DEFAULT_LAYOUT, Layout } from '../../components/participants-grid/participants-grid'
 import Protected from '../../components/protected/protected'
 import Timer from '../../components/timer/timer'

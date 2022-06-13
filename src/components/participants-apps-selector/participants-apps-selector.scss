@@ -1,0 +1,74 @@
+@import "../../assets/style/variables/colors.scss";
+
+$spacing: 4px;
+$transition-d: .1s;
+$transition-tf: ease-out;
+
+.participants-apps-selector {
+  list-style: none;
+  display: flex;
+  padding: $spacing;
+  background: rgba($text-normal-700, 0.5);
+  border-radius: 10px;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: $primary;
+    position: absolute;
+    top: $spacing;
+    bottom: $spacing;
+    border-radius: 8px;
+  }
+
+  &.right::before {
+    left: $spacing;
+    right: calc(50% + ($spacing / 2));
+    transition:
+      right $transition-d $transition-tf $transition-d,
+      left $transition-d $transition-tf 0s;
+  }
+
+  &.left::before {
+    left: calc(50% + ($spacing / 2));
+    right: $spacing;
+    transition:
+      left $transition-d $transition-tf $transition-d,
+      right $transition-d $transition-tf 0s;
+  }
+
+  .section-item {
+    width: calc(50% - 2px);
+
+    .section-button {
+      padding: 12px;
+      width: 100%;
+      background-color: transparent;
+      border: 0 none;
+      color: $text-normal-400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: color $transition-d $transition-tf;
+
+      .button-label {
+        margin-left: 8px;
+      }
+
+      > svg > path {
+        transition: fill $transition-d $transition-tf;
+      }
+    }
+
+    & .section-button:hover, &.selected .section-button {
+      color: $text-normal-0;
+
+      > svg > path {
+        fill: $text-normal-0;
+      }
+    }
+  }
+}
