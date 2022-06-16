@@ -14,7 +14,7 @@
     &.participants {
       .participants-list {
         min-height: 20%;
-        max-height: 50%;
+        max-height: calc(50% - 32px);
       }
     }
   }

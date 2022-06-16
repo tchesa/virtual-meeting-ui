@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  height: calc(50% + 32px);
 
   .chat-header {
     background-color: rgba(31, 41, 55, 0.5);
@@ -16,6 +17,21 @@
 
   .chat-list {
     flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    .chat-list-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+
+    .chat-message:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 
   .chat-footer {
