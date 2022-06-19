@@ -2,11 +2,11 @@
 
 name: CI
 
-# Controls when the workflow will run
+# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ "master" ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,20 +21,22 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.3.0
+        uses: actions/setup-node@v2.1.5
         with:
-          # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
+          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
           node-version: 16.x
-          
+
       - run: npm run build
-      
-      - name: GitHub Pages
+
+      - name: Deploy to GitHub Pages
         # You may pin to the exact commit or the version.
-        # uses: crazy-max/ghaction-github-pages@eb08c35b9fab86751edfff4e55cd5cde35ff0e52
-        uses: crazy-max/ghaction-github-pages@v3.0.0
+        # uses: JamesIves/github-pages-deploy-action@164583b9e44b4fc5910e78feb607ea7c98d3c7b9
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          # Build directory to deploy
-          build_dir: build
+          # This is the branch you wish to deploy to, for example gh-pages or docs.
+          branch: master
+          # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
+          folder: build
