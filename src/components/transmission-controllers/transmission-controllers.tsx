@@ -1,11 +1,11 @@
 import Camera from "../../assets/icons/camera"
 import Chevron from "../../assets/icons/chevron"
 import GridOutline from "../../assets/icons/grid-outline"
-import Hand from "../../assets/icons/hand"
+// import Hand from "../../assets/icons/hand"
 import Microphone from "../../assets/icons/microphone"
 import Record from "../../assets/icons/record"
 import Screen from "../../assets/icons/screen"
-import Smile from "../../assets/icons/smile"
+// import Smile from "../../assets/icons/smile"
 import './transmission-controllers.scss'
 
 const TransmissionControllers = () => {
