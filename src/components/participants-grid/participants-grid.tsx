@@ -74,6 +74,7 @@ const ParticipantsView = ({ layout = DEFAULT_LAYOUT }: Props) => {
 
   const gridStyle: CSSProperties = {
     gridTemplateColumns: new Array(gridCols).fill('1fr').join(' '),
+    gridTemplateRows: new Array(gridRows).fill('1fr').join(' '),
   }
 
   // const gridItemStyle: CSSProperties = {
