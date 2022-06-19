@@ -23,16 +23,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
-        with:
-          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-          node-version: 16.x
-
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install # will run `yarn install` command
-          
+
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: build # will run `yarn build` command
@@ -43,6 +37,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           # This is the branch you wish to deploy to, for example gh-pages or docs.
-          branch: master
+          branch: gh-pages
           # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
           folder: build
