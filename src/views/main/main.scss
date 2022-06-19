@@ -7,6 +7,7 @@ $border: 1px solid rgba(55, 65, 81, 0.5);
 .main-container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 
   .meeting-col {
     display: flex;
@@ -21,6 +22,7 @@ $border: 1px solid rgba(55, 65, 81, 0.5);
       align-items: center;
       justify-content: center;
       position: relative;
+      flex-shrink: 0;
 
       .protected {
         position: absolute;
@@ -44,6 +46,11 @@ $border: 1px solid rgba(55, 65, 81, 0.5);
     .meeting-content {
       background-color: $darker;
       flex-grow: 1;
+      display: flex;
+
+      .participants-grid-container {
+        flex-grow: 1;
+      }
     }
 
     .meeting-footer {

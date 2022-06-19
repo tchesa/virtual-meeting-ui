@@ -2,14 +2,23 @@
   padding: 24px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
   .participants-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 8px;
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
 
-    .participant-player {
-      width: 16vw;
-    }
+  .paginator {
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    right: 24px;
+    text-align: center;
   }
 }

@@ -49,8 +49,8 @@ const TransmissionControllers = () => {
             <GridOutline />
           </button>
         </li>
-        </ul>
-        <hr className="divider" />
+      </ul>
+      {/* <hr className="divider" />
         <ul className="controls-group">
         <li className="control-container">
           <button className="control-button">
@@ -68,7 +68,7 @@ const TransmissionControllers = () => {
             </span>
           </button>
         </li>
-      </ul>
+      </ul> */}
     </div>
   )
 }

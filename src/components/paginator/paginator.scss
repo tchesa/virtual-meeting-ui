@@ -1,0 +1,54 @@
+.paginator {
+  display: inline-block;
+
+  &__chevron-button,
+  &__page-button {
+    background-color: transparent;
+    padding: 4px;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+  }
+
+  &__chevron-button {
+    margin-right: 20px;
+
+    &__icon {
+      display: block;
+      transform: rotate(-90deg);
+      fill: #9CA3AF;
+    }
+
+    &--right {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+
+    &--right &__icon {
+      transform: rotate(90deg);
+    }
+
+    &--disabled &__icon {
+      fill: #374151;
+    }
+  }
+
+  &__page-button {
+    margin-left: 4px;
+    margin-right: 4px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(#374151, .8);
+    }
+
+    &--selected::after {
+      background-color: #2D8CFF;
+    }
+  }
+}
