@@ -29,13 +29,17 @@ const gridBottomMargin = 28
 const calculateColsNumber = () => {
   const availableSpace = window.innerWidth - chatColWidth - gridPadding * 2
   const participantSpace = participantWidth + gridGap
-  return Math.floor(availableSpace / participantSpace)
+  const cols = Math.floor(availableSpace / participantSpace)
+
+  return cols < 1 ? 1 : cols
 }
 
 const calculateRowsNumber = () => {
   const availableSpace = window.innerHeight - headerHeight - footerHeight - gridBottomMargin - gridPadding * 2
   const participantSpace = participantHeight + gridGap
-  return Math.floor(availableSpace / participantSpace)
+  const rows = Math.floor(availableSpace / participantSpace)
+
+  return rows < 1 ? 1 : rows
 }
 
 const ParticipantsView = ({ layout = DEFAULT_LAYOUT }: Props) => {
