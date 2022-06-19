@@ -1,0 +1,46 @@
+@import "../../assets/style/mixins/card.scss";
+@import "../../assets/style/variables/colors.scss";
+
+.timer {
+  @include card;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+
+  .timer-icon {
+    border: 2px solid $danger;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    .timer-icon-inner {
+      width: 8px;
+      height: 8px;
+      background-color: $danger;
+      border-radius: 50%;
+      margin: 4px;
+      animation: blink 2s linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .timer-label {
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

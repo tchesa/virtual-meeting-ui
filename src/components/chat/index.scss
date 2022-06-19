@@ -1,0 +1,93 @@
+@import "../../assets/style/variables/colors.scss";
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(50% + 32px);
+
+  .chat-header {
+    background-color: rgba(31, 41, 55, 0.5);
+    padding: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $text-normal-400;
+  }
+
+  .chat-list {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    .chat-list-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+
+    .chat-message:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .chat-footer {
+    border-top: 1px solid rgba($text-normal-700, 0.5);
+    padding: 0 8px;
+
+    &-header {
+      display: flex;
+      padding: 8px 0 11px;
+
+      .chat-footer-rooms {
+        flex-grow: 1;
+      }
+
+      .chat-footer-options > button {
+        background-color: transparent;
+        padding: 4px;
+        margin-left: 8px;
+
+        > svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .chat-footer-form {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+
+      > input {
+        border: 0 none;
+        padding: 12px 0;
+        flex-grow: 1;
+        background-color: transparent;
+        color: $text-normal-0;
+
+        &:focus-visible {
+          outline-color: $primary;
+        }
+
+        &::placeholder {
+          color: $text-normal-500;
+        }
+      }
+
+      > button {
+        margin-left: 8px;
+        padding: 8px;
+        background-color: $primary;
+        border-radius: 8px;
+        display: block;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}

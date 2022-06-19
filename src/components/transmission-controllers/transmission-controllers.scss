@@ -1,0 +1,51 @@
+@import "../../assets/style/mixins/card.scss";
+
+$spacing: 16px;
+
+.transmission-controllers {
+  display: inline-flex;
+  align-items: center;
+
+  .controls-group {
+    list-style: none;
+    display: inline-block;
+
+    .control-container {
+      display: inline-block;
+      padding: 0 $spacing / 2;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      .control-button {
+        @include card;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        width: 76px;
+        justify-content: center;
+
+        &.active {
+          background-color: $primary;
+          border: 0 none;
+        }
+
+        .chevron {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .divider {
+    border: 1px solid rgba(55, 65, 81, 0.5);
+    display: inline-block;
+    height: 32px;
+    margin: 0 $spacing;
+  }
+}
