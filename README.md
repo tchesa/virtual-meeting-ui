@@ -1,4 +1,4 @@
-# virtual-meeting-ui
+# [virtual-meeting-ui](https://tchesa.github.io/virtual-meeting-ui/)
 A prototype of web-based virtual meeting app,
 based on https://www.figma.com/community/file/1078619834576174964 .
 
