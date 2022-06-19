@@ -76,10 +76,10 @@ const ParticipantsView = ({ layout = DEFAULT_LAYOUT }: Props) => {
     gridTemplateColumns: new Array(gridCols).fill('1fr').join(' '),
   }
 
-  const gridItemStyle: CSSProperties = {
-    width: participantWidth,
-    paddingTop: `${(participantHeight / participantWidth) * 100}%`
-  }
+  // const gridItemStyle: CSSProperties = {
+  //   width: participantWidth,
+  //   paddingTop: `${(participantHeight / participantWidth) * 100}%`
+  // }
 
   return (
     <div className="participants-grid-container" ref={rootRef}>
@@ -88,7 +88,7 @@ const ParticipantsView = ({ layout = DEFAULT_LAYOUT }: Props) => {
           <ParticipantPlayer
             key={participant.id}
             participant={participant}
-            style={gridItemStyle}
+          // style={gridItemStyle}
           />
         ))}
       </div>

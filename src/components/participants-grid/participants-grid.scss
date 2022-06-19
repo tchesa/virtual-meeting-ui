@@ -12,6 +12,11 @@
     gap: 8px;
     margin-bottom: 28px;
     flex-grow: 1;
+    width: 100%;
+
+    .participant-player {
+      padding-top: unset;
+    }
   }
 
   .paginator {
